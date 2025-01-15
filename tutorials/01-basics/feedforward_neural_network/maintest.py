@@ -1,5 +1,6 @@
 # Das Modell ist ein einfaches Feedforward-Neuronales Netzwerk, das darauf trainiert wird, handgeschriebene Ziffern aus dem MNIST-Datensatz zu erkennen. Der MNIST-Datensatz besteht aus Bildern von handgeschriebenen Ziffern (0-9), und das Ziel des Modells ist es, diese Ziffern korrekt zu klassifizieren.
 
+# Ablauf:
 # Eingabe verarbeiten: Das Modell nimmt ein Bild mit 28x28 Pixeln als Eingabe, was insgesamt 784 Pixel ergibt.
 # Verarbeitung durch eine versteckte Schicht: Die Eingabedaten werden durch eine versteckte Schicht mit 500 Neuronen verarbeitet.
 # Ausgabe erzeugen: Das Modell gibt eine Vorhersage für eine von 10 Klassen (Ziffern 0-9) aus.
