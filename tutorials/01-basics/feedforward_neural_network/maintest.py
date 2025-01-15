@@ -79,7 +79,8 @@ for epoch in range(num_epochs):                                         # Epoche
 
 # Nachdem das Modell trainiert wurde, können wir es auf dem Testdatensatz evaluieren, um die Genauigkeit des Modells zu überprüfen.  
 with torch.no_grad():                                                   # Der gesamte Block ist in torch.no_grad() eingeschlossen, was bedeutet, dass während der Ausführung keine Gradienten berechnet werden um Speicherplatz zu sparen und Laufzeit zu optimieren.
-    correct, total = 0                                                  # Initialisierung der Variablen correct und total auf 0	um fortlaufend die Anzahl der korrekten Vorhersagen und die Gesamtanzahl der Testbeispiele zu zählen
+    correct = 0
+    total = 0                                                           # Initialisierung der Variablen correct und total auf 0	um fortlaufend die Anzahl der korrekten Vorhersagen und die Gesamtanzahl der Testbeispiele zu zählen
     for images, labels in test_loader:                                  # Iteration über alle Batches des Testdatensatzes
         images = images.reshape(-1, 28*28).to(device)                   # Verschieben der Eingabedaten und der Labels auf das Gerät und Ändernung der Form der Eingabedaten
         labels = labels.to(device)                                      
