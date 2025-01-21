@@ -1,5 +1,6 @@
 # Das Modell ist ein einfaches Feedforward-Neuronales Netzwerk, das darauf trainiert wird, handgeschriebene Ziffern aus dem MNIST-Datensatz zu erkennen. Der MNIST-Datensatz besteht aus Bildern von handgeschriebenen Ziffern (0-9), und das Ziel des Modells ist es, diese Ziffern korrekt zu klassifizieren.
 
+# Ablauf:
 # Eingabe verarbeiten: Das Modell nimmt ein Bild mit 28x28 Pixeln als Eingabe, was insgesamt 784 Pixel ergibt.
 # Verarbeitung durch eine versteckte Schicht: Die Eingabedaten werden durch eine versteckte Schicht mit 500 Neuronen verarbeitet.
 # Ausgabe erzeugen: Das Modell gibt eine Vorhersage für eine von 10 Klassen (Ziffern 0-9) aus.
@@ -14,7 +15,7 @@ device = torch.device('cpu') # nur CPU da wir Cuda nicht verwenden können
 
 
 # Zunächst definieren wir einige Hyperparameter für unser Modell. Diese Parameter steuern das Verhalten des Modells und die Trainingsphase.
-input_size = 784                                                        # 28x28=784 Pixels / anzahl der Eingabeneuronen (eins für jedes Pixel)
+input_size = 784                                                        # 28x28=784 Pixels / Anzahl der Eingabeneuronen (eins für jedes Pixel)
 hidden_size = 500                                                       # Anzahl der Neuronen in der Hidden Layer
 num_classes = 10                                                        # 10 Klassen (eine Klasse für jedes Zeichen)
 num_epochs = 5                                                          # Anzahl der Epochen (mehr Epochen = bessere Genauigkeit aber auch längere Trainingszeit)
@@ -78,8 +79,8 @@ for epoch in range(num_epochs):                                         # Epoche
 
 # Nachdem das Modell trainiert wurde, können wir es auf dem Testdatensatz evaluieren, um die Genauigkeit des Modells zu überprüfen.  
 with torch.no_grad():                                                   # Der gesamte Block ist in torch.no_grad() eingeschlossen, was bedeutet, dass während der Ausführung keine Gradienten berechnet werden um Speicherplatz zu sparen und Laufzeit zu optimieren.
-    correct = 0
-    total = 0                                                           # Initialisierung der Variablen correct und total auf 0	um fortlaufend die Anzahl der korrekten Vorhersagen und die Gesamtanzahl der Testbeispiele zu zählen
+    correct = 0                                                         # Initialisierung der Variablen correct und total auf 0	um fortlaufend die Anzahl der korrekten Vorhersagen und die Gesamtanzahl der Testbeispiele zu zählen
+    total = 0                                                           
     for images, labels in test_loader:                                  # Iteration über alle Batches des Testdatensatzes
         images = images.reshape(-1, 28*28).to(device)                   # Verschieben der Eingabedaten und der Labels auf das Gerät und Ändernung der Form der Eingabedaten
         labels = labels.to(device)                                      
