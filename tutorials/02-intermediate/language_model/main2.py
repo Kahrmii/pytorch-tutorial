@@ -6,7 +6,9 @@ import numpy as np
 from torch.nn.utils import clip_grad_norm_
 from data_utils import Dictionary, Corpus
 import os
+from datasets import load_dataset
 
+ds = load_dataset("wikimedia/wikipedia", "20231101.ace")
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -15,16 +17,16 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 embed_size = 128
 hidden_size = 1024
 num_layers = 1
-num_epochs = 50
-num_samples = 200     # number of words to be sampled
+num_epochs = 5
+num_samples = 1000     # number of words to be sampled
 batch_size = 20
 seq_length = 30
-learning_rate = 0.001
+learning_rate = 0.002
 
 corpus = Corpus()
 # Load all text files from a directory
 data_dir = 'C:\\Users\\a.frost\\Downloads\\btd'
-train_files = [os.path.join(data_dir, file) for file in os.listdir(data_dir) if file.endswith('.txt')]
+train_files = ds
 
 # Combine data from multiple files
 ids_list = [corpus.get_data(file, batch_size) for file in train_files]

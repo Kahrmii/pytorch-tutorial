@@ -24,7 +24,7 @@ class Corpus(object):
 
     def get_data(self, path, batch_size=20):
         # Add words to the dictionary
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding="utf-8") as f:
             tokens = 0
             for line in f:
                 words = line.split() + ['<eos>']
@@ -35,12 +35,16 @@ class Corpus(object):
         # Tokenize the file content
         ids = torch.LongTensor(tokens)
         token = 0
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding="utf-8") as f:
             for line in f:
                 words = line.split() + ['<eos>']
-                for word in words:
-                    ids[token] = self.dictionary.word2idx[word]
-                    token += 1
+                try:
+                    for word in words:
+                        ids[token] = self.dictionary.word2idx[word]
+                        token += 1
+                except:
+                    print("Warning! Skipped line", line)
+                    pass
         num_batches = ids.size(0) // batch_size
         ids = ids[:num_batches*batch_size]
         return ids.view(batch_size, -1)
