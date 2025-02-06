@@ -2,7 +2,6 @@
 # https://github.com/pytorch/examples/tree/master/word_language_model 
 import torch
 import torch.nn as nn
-import torch_directml
 import numpy as np
 from torch.nn.utils import clip_grad_norm_
 from data_utils import Dictionary, Corpus
@@ -10,22 +9,22 @@ import os
 
 
 # Device configuration
-device = torch_directml.device()
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print("device set")
 
 # Hyper-parameters
 embed_size = 128
-hidden_size = 1024
-num_layers = 1
-num_epochs = 5
-num_samples = 200     # number of words to be sampled
+hidden_size = 2048
+num_layers = 5
+num_epochs = 10
+num_samples = 500     # number of words to be sampled
 batch_size = 20
-seq_length = 30
+seq_length = 50
 learning_rate = 0.002
 
 corpus = Corpus()
 # Load all text files from a directory
-data_dir = 'C:\\Users\\aaron\\Desktop\\VSC\\py\\pytorch-tutorial\\tutorials\\02-intermediate\\language_model\\data'
+data_dir = 'C:\\Users\\a.frost\\Desktop\\py\\Pytorch training\\pytorch-tutorial\\tutorials\\02-intermediate\\language_model\\data'
 train_files = [os.path.join(data_dir, file) for file in os.listdir(data_dir) if file.endswith('.txt')]
 
 # Combine data from multiple files
@@ -126,9 +125,6 @@ else:
             if step % 100 == 0:
                 print ('Epoch [{}/{}], Step[{}/{}], Loss: {:.4f}, Perplexity: {:5.2f}'
                     .format(epoch+1, num_epochs, step, num_batches, loss.item(), np.exp(loss.item())))
-    
-    # Save model with vocab size
-    save_checkpoint(model, vocab_size, model_path)
 
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
@@ -136,7 +132,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 # Truncated backpropagation
 def detach(states):
-    return [state.detach() for state in states] 
+    return [state.detach() for state in states]
 
 # Test the model
 with torch.no_grad():
@@ -150,14 +146,14 @@ with torch.no_grad():
         input = torch.multinomial(prob, num_samples=1).unsqueeze(1).to(device)
 
         for i in range(num_samples):
-            # Forward propagate RNN 
+            # Forward
             output, state = model(input, state)
 
             # Sample a word id
             prob = output.exp()
             word_id = torch.multinomial(prob, num_samples=1).item()
 
-            # Fill input with sampled word id for the next time step
+            # Fill input with sampled word id
             input.fill_(word_id)
 
             # File write
@@ -167,6 +163,5 @@ with torch.no_grad():
 
             if (i+1) % 100 == 0:
                 print('Sampled [{}/{}] words and save to {}'.format(i+1, num_samples, 'sample.txt'))
-
-# Save the model checkpoints
-torch.save(model.state_dict(), 'model.ckpt')
+                
+# save_checkpoint(model, vocab_size, model_path)
