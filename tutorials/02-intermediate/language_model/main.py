@@ -3,6 +3,7 @@
 import torch
 import torch.nn as nn
 import numpy as np
+import time
 from torch.nn.utils import clip_grad_norm_
 from data_utils import Dictionary, Corpus
 import os
@@ -89,6 +90,7 @@ if os.path.exists(model_path):
         model = RNNLM(vocab_size, embed_size, hidden_size, num_layers).to(device)
 else:
     print('No existing model found. Training new model...')
+    start_time = time.time()
     model = RNNLM(vocab_size, embed_size, hidden_size, num_layers).to(device)
     # train
     for epoch in range(num_epochs):
@@ -121,8 +123,8 @@ else:
 
             step = (i+1) // seq_length
             if step % 100 == 0:
-                print ('Epoch [{}/{}], Step[{}/{}], Loss: {:.4f}, Perplexity: {:5.2f}'
-                    .format(epoch+1, num_epochs, step, num_batches, loss.item(), np.exp(loss.item())))
+                elapsed_time = time.time() - start_time
+                print ( f'Training time: {elapsed_time/60:.2f} minutes / {elapsed_time:.2f} seconds', '     Epoch [{}/{}], Step[{}/{}], Loss: {:.4f}, Perplexity: {:5.2f}'.format(epoch+1, num_epochs, step, num_batches, loss.item(), np.exp(loss.item())))
 
 # Loss and opt 
 criterion = nn.CrossEntropyLoss()
