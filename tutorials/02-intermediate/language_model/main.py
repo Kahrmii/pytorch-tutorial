@@ -14,7 +14,7 @@ print("device set")
 
 # Hyper-parameters
 embed_size = 128
-hidden_size = 2048
+hidden_size = 1024
 num_layers = 5
 num_epochs = 10
 num_samples = 500
