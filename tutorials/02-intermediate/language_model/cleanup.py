@@ -14,5 +14,5 @@ def remove_whitespace_lines_from_folder(input_folder, output_file):
 
 if __name__ == "__main__":
     input_folder = 'C:\\Users\\a.frost\\Downloads\\btd'
-    output_file = 'C:\\Users\\a.frost\\Desktop\\py\\Pytorch training\\pytorch-tutorial\\tutorials\\02-intermediate\\language_model\\data\\output_file.txt'
+    output_file = 'C:\\Users\\a.frost\\Desktop\\py\\Pytorch training\\pytorch-tutorial\\Data\\output_file.txt'
     remove_whitespace_lines_from_folder(input_folder, output_file)
