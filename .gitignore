@@ -1,6 +1,5 @@
 *.pkl
 *.zip
 *.txt
-data/
-.ipynb_checkpoints
-model.ckpt
+*.pth
+*.ckpt
