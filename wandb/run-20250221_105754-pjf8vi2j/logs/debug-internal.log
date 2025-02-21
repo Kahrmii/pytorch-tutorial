@@ -1209,3 +1209,6 @@
 {"time":"2025-02-21T14:18:25.2421101+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
 {"time":"2025-02-21T14:18:35.2389724+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
 {"time":"2025-02-21T14:18:45.2400363+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T14:18:55.2427719+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T14:19:05.2429286+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T14:19:15.2401536+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
