@@ -1,0 +1,17 @@
+{"time":"2025-02-21T10:57:54.8430982+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"C:\\Users\\a.frost\\Desktop\\py\\Pytorch training\\pytorch-tutorial\\wandb\\run-20250221_105754-pjf8vi2j\\logs\\debug-core.log"}
+{"time":"2025-02-21T10:57:55.0357418+01:00","level":"INFO","msg":"created new stream","id":"pjf8vi2j"}
+{"time":"2025-02-21T10:57:55.0359208+01:00","level":"INFO","msg":"stream: started","id":"pjf8vi2j"}
+{"time":"2025-02-21T10:57:55.0357418+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"pjf8vi2j"}
+{"time":"2025-02-21T10:57:55.0357418+01:00","level":"INFO","msg":"sender: started","stream_id":"pjf8vi2j"}
+{"time":"2025-02-21T10:57:55.0359208+01:00","level":"INFO","msg":"handler: started","stream_id":"pjf8vi2j"}
+{"time":"2025-02-21T10:57:55.4594042+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T10:58:15.4721494+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:58:25.4716133+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:58:35.4710278+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:58:45.4715243+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:58:55.4695218+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:59:05.4717401+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:59:15.4682184+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:59:25.466156+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:59:35.4657797+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}
+{"time":"2025-02-21T10:59:45.4670472+01:00","level":"ERROR","msg":"monitor: cpu: error sampling metrics: couldn't find pid: 19120"}

@@ -1,0 +1,31 @@
+{
+  "os":  "Windows-10-10.0.22621-SP0",
+  "python":  "CPython 3.11.0rc2",
+  "startedAt":  "2025-02-21T09:54:25.022824Z",
+  "program":  "c:\\Users\\a.frost\\Desktop\\py\\Pytorch training\\pytorch-tutorial\\traingsdaten.py",
+  "codePath":  "traingsdaten.py",
+  "git":  {
+    "remote":  "https://github.com/Kahrmii/pytorch-tutorial.git",
+    "commit":  "c39cb8ac1b8bb1375edfc19173c714e74070f4e1"
+  },
+  "email":  "aaron.frost@gmx.de",
+  "root":  "C:\\Users\\a.frost\\Desktop\\py\\Pytorch training\\pytorch-tutorial",
+  "host":  "CDE-GM06YTJA",
+  "executable":  "C:\\Users\\a.frost\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "codePathLocal":  "traingsdaten.py",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "252839981056",
+      "used":  "168437780480"
+    }
+  },
+  "memory":  {
+    "total":  "15859003392"
+  },
+  "cpu":  {
+    "count":  6,
+    "countLogical":  12
+  }
+}

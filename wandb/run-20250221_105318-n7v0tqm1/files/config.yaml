@@ -1,0 +1,50 @@
+_wandb:
+    value:
+        cli_version: 0.19.7
+        m: []
+        python_version: 3.11.0rc2
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 55
+                - 71
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 55
+                - 71
+            "3":
+                - 19
+                - 23
+                - 55
+            "4": 3.11.0rc2
+            "5": 0.19.7
+            "6": 4.47.1
+            "8":
+                - 3
+                - 5
+            "12": 0.19.7
+            "13": windows-amd64
+LEARNING_RATE:
+    value: 0.0001
+MAX_LEN:
+    value: 256
+SEED:
+    value: 42
+SUMMARY_LEN:
+    value: 80
+TRAIN_BATCH_SIZE:
+    value: 16
+TRAIN_EPOCHS:
+    value: 1
+VAL_EPOCHS:
+    value: 1
+VALID_BATCH_SIZE:
+    value: 16

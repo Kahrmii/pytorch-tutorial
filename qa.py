@@ -511,13 +511,13 @@ if __name__ == "__main__":
     print(f"Starte Training mit Daten aus: {TRAINING_DATA_PATH}")
     print(f"Model wird gespeichert unter: {MODEL_SAVE_PATH}")
     
-    # qa.train(TRAINING_DATA_PATH, epochs=3)
+    qa.train(TRAINING_DATA_PATH, epochs=3)
     
     # Oder lade ein bereits trainiertes Model
-    qa.load_model()
+    # qa.load_model()
     
     # Beispiel für eine Frage
-    context = qa.find_relevant_context("Wofür wird PyTorch verwendet?")
+    context = "Wofür wird PyTorch verwendet?"
     frage = "Wofür wird PyTorch verwendet?"
     
     antwort = qa.answer_question(frage, context)
