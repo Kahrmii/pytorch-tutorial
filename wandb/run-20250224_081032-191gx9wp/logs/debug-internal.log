@@ -1,0 +1,7 @@
+{"time":"2025-02-24T08:10:32.389634+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"C:\\Users\\a.frost\\Desktop\\py\\Pytorch training\\pytorch-tutorial\\wandb\\run-20250224_081032-191gx9wp\\logs\\debug-core.log"}
+{"time":"2025-02-24T08:10:34.234902+01:00","level":"INFO","msg":"created new stream","id":"191gx9wp"}
+{"time":"2025-02-24T08:10:34.234902+01:00","level":"INFO","msg":"stream: started","id":"191gx9wp"}
+{"time":"2025-02-24T08:10:34.2356611+01:00","level":"INFO","msg":"sender: started","stream_id":"191gx9wp"}
+{"time":"2025-02-24T08:10:34.2356611+01:00","level":"INFO","msg":"handler: started","stream_id":"191gx9wp"}
+{"time":"2025-02-24T08:10:34.2361703+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"191gx9wp"}
+{"time":"2025-02-24T08:10:34.5798617+01:00","level":"INFO","msg":"Starting system monitor"}
